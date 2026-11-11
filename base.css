@@ -1,0 +1,123 @@
+* { box-sizing: border-box; }
+:root { font-family: "LXGW WenKai", serif; font-synthesis: none; }
+body { margin: 0; --bg: #0b1725; --panel: #112131; --ink: #e9dcba; --muted: #b8af98; --gold: #cba86b; --line: #645c46; --accent: #e4bc78; --disc: #0d1a28; --inner-ink: var(--ink); --inner-muted: var(--muted); --inner-line: var(--line); --selected: #263346; color: var(--ink); background: var(--bg); }
+body[data-direction="C"] { --bg: #1b2422; --panel: #222e2a; --ink: #e4dfce; --muted: #b9c0b2; --gold: #c4a778; --line: #677060; --accent: #debc7d; --disc: #e5e0d1; --inner-ink: #343e36; --inner-muted: #5d665b; --inner-line: #9da68e; --selected: #304037; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; color: inherit; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+button:hover { color: var(--accent); }
+[hidden] { display: none !important; }
+.shell { width: 100%; max-width: 430px; margin: auto; padding: 14px 18px 13px; }
+.masthead { display: flex; align-items: center; justify-content: space-between; height: 28px; margin-bottom: 12px; }
+.wordmark { display: flex; align-items: center; gap: 7px; color: inherit; text-decoration: none; font-size: 17px; letter-spacing: 1px; }
+.brand-seal { display: grid; place-items: center; width: 22px; height: 24px; border: 1px solid var(--gold); color: var(--gold); font-size: 15px; }
+.brand-en { font: 12px "Cormorant Garamond", serif; letter-spacing: 1px; margin-left: 3px; color: var(--muted); }
+.edition { font-size: 12px; color: var(--muted); }
+.directions { display: grid; grid-template-columns: 1.15fr 1fr 1fr; height: 38px; margin-bottom: 12px; border: 1px solid var(--line); }
+.directions button { border: 0; background: transparent; padding: 0 4px; font-size: 12px; white-space: nowrap; }
+.directions button + button { border-left: 1px solid var(--line); }
+.directions button span { font-family: "Cormorant Garamond", serif; margin-right: 3px; }
+.directions [aria-pressed="true"] { background: var(--selected); color: var(--accent); }
+.pages { display: grid; grid-template-columns: 1fr 1fr; height: 32px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+.pages button { background: transparent; border: 0; padding: 0 0 10px; font-size: 14px; color: var(--muted); }
+.pages button span { font: 12px "Cormorant Garamond", serif; margin-left: 8px; letter-spacing: .7px; }
+.pages [aria-pressed="true"] { color: var(--ink); border-bottom: 2px solid var(--accent); }
+.view-heading { display: flex; justify-content: space-between; align-items: center; height: 54px; }
+h1 { font-weight: 400; font-size: 28px; line-height: 34px; letter-spacing: 3px; margin: 0; }
+.title-star { font-size: 21px; color: var(--gold); margin-left: 13px; }
+.view-heading p { font-family: "Cormorant Garamond", "LXGW WenKai", serif; font-size: 14px; line-height: 20px; margin: 0; letter-spacing: 1px; color: var(--muted); }
+.location { font: 12px "LXGW WenKai", serif; margin-left: 14px; letter-spacing: 2px; }
+.folio { font: 32px "Cormorant Garamond", serif; color: var(--gold); }
+figure { margin: 4px -6px 0; }
+.wheel { width: 100%; height: auto; display: block; overflow: visible; }
+.wheel text { font-family: "LXGW WenKai", serif; font-size: 14px; text-anchor: middle; dominant-baseline: central; fill: var(--inner-ink); }
+.wheel .zodiac-label { fill: var(--gold); }
+.outer-disc { fill: transparent; }
+.inner-disc { fill: var(--disc); }
+.rings, .engraving, .zodiac-boundary, .micro-tick, .minor-tick { fill: none; stroke: var(--gold); stroke-width: .65; }
+.rings { opacity: .7; }
+.rings circle:nth-child(n+3) { stroke: var(--inner-line); }
+.engraving { opacity: .55; }
+.micro-tick { opacity: .42; stroke-width: .5; }
+.minor-tick { opacity: .85; }
+.zodiac-boundary { opacity: .8; }
+.term-tick, .month-boundary { stroke: var(--inner-line); stroke-width: .7; }
+.jie-dot { fill: var(--inner-muted); }
+.wheel .term-label, .wheel .month-label { fill: var(--inner-muted); }
+.month-highlight { fill: none; stroke: transparent; stroke-width: 23; }
+.compass { fill: none; stroke: var(--inner-line); stroke-width: .65; opacity: .55; }
+.wheel .core-degree { font: 23px "Cormorant Garamond", serif; fill: var(--inner-ink); }
+.wheel .core-label { font-size: 14px; fill: var(--inner-muted); }
+.wheel .core-month { font-size: 14px; fill: var(--inner-muted); }
+.planet-leader { stroke: var(--inner-muted); stroke-width: .7; }
+.body-dot { fill: var(--inner-muted); }
+.wheel .planet-name { fill: var(--inner-muted); }
+.solar-ray { stroke: var(--gold); stroke-width: 1; }
+.sun .body-dot { fill: var(--accent); stroke: var(--accent); stroke-width: 1; }
+.hour-marker { opacity: 0; }
+.hour-marker rect { fill: var(--selected); stroke: var(--accent); stroke-width: .7; }
+.wheel .hour-marker text { fill: var(--accent); font-size: 14px; }
+.ink-wash { display: none; }
+.view[data-reading="western"] .current-planets .body-dot { fill: var(--accent); }
+.view[data-reading="western"] .current-planets .planet-name { fill: var(--inner-ink); font-weight: 400; }
+.view[data-reading="bazi"] .selected-month .month-highlight { stroke: var(--gold); opacity: .15; }
+.view[data-reading="bazi"] .selected-month .month-label, .view[data-reading="bazi"] .selected-term .term-label { fill: var(--accent); font-weight: 400; }
+.view[data-reading="bazi"] .selected-term .term-tick { stroke: var(--accent); stroke-width: 2; }
+.view[data-reading="bazi"] .selected-term .jie-dot { fill: var(--accent); r: 3px; }
+.view[data-reading="ziwei"] .moon .body-dot { fill: var(--accent); stroke: var(--accent); stroke-width: 3; }
+.view[data-reading="ziwei"] .moon .planet-name { fill: var(--accent); font-weight: 400; }
+.view[data-reading="ziwei"] .hour-marker { opacity: 1; }
+.birth-overlay { opacity: .4; }
+.birth-overlay .body-dot { fill: none; stroke: var(--inner-muted); stroke-width: 1; }
+.birth-overlay .planet-leader { stroke-dasharray: 1 2; }
+figcaption { display: flex; align-items: center; justify-content: center; gap: 6px; height: 22px; font-size: 12px; line-height: 18px; color: var(--muted); white-space: nowrap; }
+.legend-divider { margin: 0 3px; color: var(--gold); }
+.legend-solid, .legend-hollow { display: inline-block; flex: 0 0 5px; height: 5px; border: 1px solid var(--gold); border-radius: 50%; }
+.legend-solid { background: var(--gold); }
+.readings { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; margin-top: 10px; }
+.reading-card { position: relative; height: 122px; border: 1px solid var(--line); background: transparent; padding: 9px 9px 6px; text-align: left; }
+.reading-card[aria-pressed="true"] { border-color: var(--accent); background: var(--selected); }
+.card-top { display: flex; justify-content: space-between; align-items: center; font-size: 15px; line-height: 17px; margin-bottom: 8px; }
+.card-dot { width: 5px; height: 5px; border: 1px solid var(--muted); border-radius: 50%; }
+[aria-pressed="true"] .card-dot { background: var(--accent); border-color: var(--accent); }
+.reading-summary { display: block; font-size: 12px; line-height: 19px; }
+.card-bottom { display: block; font-size: 12px; line-height: 15px; color: var(--muted); margin-top: 6px; white-space: nowrap; }
+.pillars { display: grid; grid-template-columns: 1fr 1fr; row-gap: 6px; font-size: 16px; line-height: 18px; }
+.pillars small { font-size: 12px; color: var(--muted); margin-left: 2px; }
+.ziwei-star { display: block; font-size: 12px; line-height: 15px; margin-top: -3px; margin-bottom: 4px; }
+.palaces { width: 72px; height: 60px; display: grid; grid-template-columns: repeat(4,18px); grid-template-rows: repeat(4,15px); margin: auto; }
+.palace { border: .5px solid var(--line); font-size: 12px; line-height: 14px; text-align: center; }
+.palace.empty { border: 0; }
+.palace.life { color: var(--accent); border-color: var(--accent); }
+.insight { margin: 10px 0 0; border-left: 1px solid var(--accent); padding: 8px 10px; font-size: 13px; line-height: 19px; min-height: 54px; color: var(--ink); background: var(--panel); }
+.view-footer { display: flex; justify-content: space-between; gap: 8px; margin-top: 10px; font-size: 12px; line-height: 16px; color: var(--muted); }
+.today-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); min-height: 66px; align-items: center; }
+.today-strip > div { padding-left: 11px; }
+.today-strip > div:first-child { padding-left: 4px; }
+.today-strip > div + div { border-left: 1px solid var(--line); }
+.stat-label { display: block; color: var(--muted); font-size: 12px; line-height: 18px; }
+.today-strip strong { display: block; font-size: 16px; line-height: 22px; font-weight: 400; }
+.moon-stat { display: flex; align-items: center; gap: 4px; }
+.moon-phase { width: 30px; height: 30px; flex-shrink: 0; }
+.moon-phase circle { fill: var(--panel); stroke: var(--gold); stroke-width: .7; }
+.moon-phase path { fill: var(--gold); }
+.flows { margin-top: 9px; }
+.flows > div { position: relative; display: flex; align-items: center; gap: 12px; min-height: 35px; border-bottom: 1px solid var(--line); }
+.flow-name { font-size: 12px; white-space: nowrap; color: var(--gold); }
+.flows p { font-size: 12px; line-height: 17px; margin: 0; padding-right: 12px; }
+.flow-index { font: 12px "Cormorant Garamond", serif; margin-left: auto; color: var(--muted); }
+.no-js { font-size: 14px; }
+body[data-direction="C"] .wheel .zodiac-label { fill: var(--gold); }
+body[data-direction="C"] .ink-wash { display: block; fill: none; stroke: #667260; stroke-width: 2; opacity: .2; }
+body[data-direction="C"] .ink-wash path { stroke-width: 12; opacity: .14; }
+body[data-direction="C"] .wheel .term-label, body[data-direction="C"] .wheel .month-label, body[data-direction="C"] .wheel .core-month { font-family: "LXGW WenKai", serif; }
+body[data-direction="C"] .view[data-reading="bazi"] .selected-month .month-label, body[data-direction="C"] .view[data-reading="bazi"] .selected-term .term-label, body[data-direction="C"] .view[data-reading="ziwei"] .moon .planet-name { fill: #87412b; }
+body[data-direction="C"] .view[data-reading="bazi"] .selected-term .term-tick { stroke: #87412b; }
+body[data-direction="C"] .view[data-reading="bazi"] .selected-term .jie-dot, body[data-direction="C"] .sun .body-dot { fill: #87412b; stroke: #87412b; }
+body[data-direction="C"] .solar-ray { stroke: #87412b; }
+body[data-direction="C"] .hour-marker rect { fill: #343e36; }
+body[data-direction="C"] .view[data-reading="western"] .current-planets .body-dot { fill: #87412b; }
+body[data-direction="C"] .view[data-reading="ziwei"] .moon .body-dot { fill: #87412b; stroke: #87412b; }
+body[data-direction="C"] .birth-overlay .body-dot { fill: none; stroke: var(--inner-muted); }
+@media (min-width: 600px) { .shell { margin: 28px auto; border: 1px solid var(--line); } }
+@media (max-width: 374px) { .shell { padding-left: 10px; padding-right: 10px; } .brand-en { display: none; } figcaption { gap: 3px; } }
