@@ -73,3 +73,14 @@
 .nishi-source{font-size:12px;line-height:1.7;color:var(--muted);margin:8px 0 3px}
 .nishi-quote a{display:inline-block;font-size:12px;line-height:1.7;text-underline-offset:3px;padding:3px 0}
 .nishi-quote a:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+
+/* Primary-source readings follow the lecture excerpt rhythm. */
+.source-quotes{border-top:1px solid var(--line);margin-top:22px;padding-top:4px;min-width:0;overflow-wrap:anywhere}
+.source-quote{border-top:1px dotted var(--line);padding:13px 0;min-width:0}
+.source-quote h4{font-size:14px;font-weight:400;color:var(--gold);margin:0 0 7px}
+.source-quote blockquote{font-size:15px;line-height:1.85;margin:0;padding-left:12px;border-left:2px solid var(--line)}
+.source-quote .source-english{font-family:'Cormorant Garamond','LXGW WenKai',serif;font-size:20px;line-height:1.5}
+.source-translation{font-size:15px;line-height:1.85;margin:10px 0 0}
+.source-attribution{font-size:12px;line-height:1.7;color:var(--muted);margin:8px 0 3px}
+.source-quotes a{display:inline-block;font-size:12px;line-height:1.7;text-underline-offset:3px;padding:3px 0}
+.source-quotes a:focus-visible{outline:1px solid var(--gold);outline-offset:3px}

@@ -2674,3 +2674,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ============================================================================
 
 《天纪》讲课转写摘引。讲者：倪海厦。转写与整理来源：Renhuai123/nihai-tianji-corpus（github.com/Renhuai123/nihai-tianji-corpus）。本页只做了选取和连续截取，没有改写所选文字。短引数据按 CC BY-NC-SA 4.0（creativecommons.org/licenses/by-nc-sa/4.0/）提供。原课程的著作权归权利人；本页没有得到权利人的认可或背书。
+
+
+第一手来源短引：古籍与 Alan Leo
+原作：《滴天髓阐微》（任铁樵注，清代）；Alan Leo《How to Judge a Nativity》，1928 年第四版，Modern Astrology Office，伦敦（初版 1903 年，作者 1917 年去世）。没有逐版对照，不将第四版摘引称为初版原文。
+文字来源：维基文库页面的转录文本（zh.wikisource.org/wiki/滴天髓闡微），修订号 2600158；Internet Archive 所藏扫描本的识别文本（archive.org/details/howtojudgenativi00leoa）。两份本地快照于 2026-11-11 取回。未核纸本。维基文库的现代录入另有站点许可；Internet Archive 提供扫描和识别文本，下载可用性不等于单独的版权许可。
+本项目新增：白话和中文翻译由 AI 撰写，仅帮助理解；识别错字的校正有记录。原文、转录载体与本项目新增内容分层记录。来源快照与审计数据不随页面发布。
