@@ -2670,3 +2670,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+============================================================================
+
+《天纪》讲课转写摘引。讲者：倪海厦。转写与整理来源：Renhuai123/nihai-tianji-corpus（github.com/Renhuai123/nihai-tianji-corpus）。本页只做了选取和连续截取，没有改写所选文字。短引数据按 CC BY-NC-SA 4.0（creativecommons.org/licenses/by-nc-sa/4.0/）提供。原课程的著作权归权利人；本页没有得到权利人的认可或背书。

@@ -64,3 +64,12 @@
 .now-mark{display:block;font-size:12px;line-height:1.6;color:var(--accent)}
 .dayun-table tr[data-current=true]{background:var(--selected)}
 .now-palace-mark{font-size:12px;line-height:1.6;color:var(--accent);border-left:2px solid var(--gold);padding-left:4px}
+
+/* Lecture excerpts are separate from the live palace details. */
+.nishi-quotes{border-top:1px solid var(--line);margin-top:22px;padding-top:4px;min-width:0;overflow-wrap:anywhere}
+.nishi-quote{border-top:1px dotted var(--line);padding:13px 0}
+.nishi-quote h4{font-size:14px;font-weight:400;color:var(--gold);margin:0 0 7px}
+.nishi-quote blockquote{font-size:15px;line-height:1.85;white-space:pre-wrap;margin:0;padding-left:12px;border-left:2px solid var(--line)}
+.nishi-source{font-size:12px;line-height:1.7;color:var(--muted);margin:8px 0 3px}
+.nishi-quote a{display:inline-block;font-size:12px;line-height:1.7;text-underline-offset:3px;padding:3px 0}
+.nishi-quote a:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
